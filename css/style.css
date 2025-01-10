@@ -1,0 +1,435 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #626B71;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+h1, h2, h3, h4, p, ul, li, table, tr, th, td, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+input {
+    font-size: 1rem;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+video {
+    width: 100%;
+    vertical-align: bottom;
+}
+h2 {
+    font-size: 2rem;
+    line-height: 1;
+    color: #2E415A;
+    font-family: "游明朝", "Yu Mincho", YuMincho, serif;
+    text-align: center;
+    padding-top: 53px;
+}
+h3{
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #3B4043;
+    text-align: center;
+    position: relative;
+    margin-top: 45px;
+}
+h3::before{
+    content: '';
+    border-top: 4px solid #CAC4B8;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 2px);
+}
+h3 span {
+    background-color: #fff;
+    padding: 0 20px;
+    position: relative;
+}
+h4 {
+    font-size: 1.125rem;
+    line-height: 1;
+    color: #2F3857;
+    text-align: center;
+    padding-top: 40px;
+    position: relative;
+    padding-bottom: 16px;
+}
+h4::before{
+    content: '';
+    border-top: 4px solid #CAC4B8;
+    display: block;
+    position: absolute;
+    width: 50px;
+    left: calc(50% - 25px);
+    bottom: 0;
+}
+p {
+    line-height: 1.875;
+    padding-top: 30px;
+}
+.container {
+    margin: 0 40px;
+}
+.button {
+    text-align: center;
+    padding-top: 40px;
+}
+.button a, .button input {
+    background-color: #2F3857;
+    color: #fff;
+    padding: 25px 0;
+    font-weight: bold;
+    text-decoration: none;
+    min-width: 260px;
+    display: inline-block;
+    border-radius: 39px;
+    background-image: url(../img/icn_arrow.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: right 20px center;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.16);
+    text-indent: -15px;
+    appearance: none;
+}
+.button a:hover, .button a:focus, .button input:hover, .button input:focus {
+    background-color: #9F3448;
+}
+header h1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+header h1 img {
+    width: 127px;
+    height: auto;
+}
+
+.carousel{
+     overflow: hidden;
+}
+
+.carousel .image-container{
+    display: flex;
+    transition:transform  0.4s;
+
+    /* バグの解消（ブラウザの違い） */
+    align-items: center;
+
+}
+
+.carousel button {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+.carousel .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel .indicator {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.carousel .indicator li {
+    width: 13px;
+    height: 13px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background-color:#F5F4EF ;
+    border-radius: 100%;
+    cursor: pointer;
+
+}
+
+.carousel .indicator li.current {
+    
+    background-color:#CBC4B7 ;
+    
+
+}
+
+
+
+.miryoku {
+    background-image: url(../img/bg_miryoku.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 30vw;
+    background-position: center bottom -6vw;
+}
+.tokucho .bg {
+    background-image: url(../img/bg_tokucho.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+.tokucho h2 {
+    color: #fff;
+    padding-top: 0;
+}
+.tokucho ul {
+    color: #fff;
+    padding-top: 30px;
+}
+.tokucho li {
+    padding-top: 1em;
+    margin-left: 1em;
+}
+.tokucho li:first-child {
+    padding-top: 0;
+}
+.tokucho .container {
+    padding-top: 50px;
+    padding-bottom: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.osusume ul {
+    list-style: none;
+}
+.osusume li {
+    margin-top: 30px;
+}
+.osusume .new::after {
+    content: '';
+    background-image: url(../img/icn_new.png);
+    display: block;
+    width: 76px;
+    height: 82px;
+    background-size: 76px 82px;
+    position: absolute;
+    top: 15px;
+    right: 16px;
+}
+.osusume .new {
+    position: relative;
+}
+.osusume section+section {
+    margin-top: 80px;
+}
+.toriatsukai {
+    margin-top: 60px;
+    background-image: linear-gradient(#F5F4EF, #fff);
+}
+.toriatsukai img {
+    padding-top: 20px;
+}
+.toriatsukai table {
+    border: 2px solid #CBC4B7;
+    border-collapse: collapse;
+}
+.toriatsukai th {
+    border-top: 2px solid #CBC4B7;
+    padding: 16px;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    text-align: left;
+}
+.toriatsukai th[scope="row"]{
+    border-right: 2px solid #CBC4B7;
+    background-color: #fff;
+    white-space: nowrap;
+    font-weight: normal;
+}
+.toriatsukai th[scope="col"]{
+    border-bottom: 2px solid #CBC4B7;
+    background-color: #F5F4EF;
+}
+.toriatsukai td {
+    border-bottom: 2px solid #CBC4B7;
+    padding: 16px;
+    background-color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+.shop iframe {
+    margin-top: 40px;
+    width: 100%;
+    height: 47vw;
+}
+.shop dl {
+    padding-top: 30px;
+}
+.shop dt{
+    font-weight: bold;
+}
+.shop .shop-data {
+    padding-top: 10px;
+}
+.shop .shop-data div {
+    display: flex;
+}
+.shop .shop-data dt {
+    min-width: 5em;
+}
+.shitsumon{
+    margin-top: 50px;
+    background-image: linear-gradient(#F5F4EF, #fff);
+}
+.shitsumon form {
+    padding-top: 30px;
+}
+.shitsumon input[type="text"]{
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+.shitsumon input[type="submit"]{
+    border: none;
+}
+footer {
+    margin-top: 65px;
+    background-color: #2F3857;
+    color: #fff;
+}
+footer a {
+    color: #fff;
+}
+footer img {
+    width: 104px;
+}
+footer address {
+    padding-top: 31px;
+    font-style: normal;
+    font-family: "游明朝", "Yu Mincho", YuMincho, serif;
+}
+footer .container {
+    padding: 54px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#pagetop {
+    display: none;
+}
+.tokucho em {
+    font-weight: bold;
+    font-style: normal;
+}
+@media (min-width:768px){
+    .container {
+        max-width: 740px;
+        margin: auto;
+    }
+    h2{
+        padding-top: 78px;
+        font-size: 2.25rem;
+    }
+    h4 {
+        padding-top: 50px;
+    }
+    p {
+        text-align: center;
+    }
+    p span {
+        display: block;
+    }
+    .button {
+        padding-top: 30px;
+    }
+    header h1 {
+        padding-top: 50px;
+    }
+    header h1 img {
+        width: 137px;
+    }
+    .carousel {
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .carousel button {
+        width: 56px;
+        height: 56px;
+    }
+    .miryoku {
+        padding-bottom: 16.5vw;
+        background-position: center bottom -18.5vw;
+    }
+    .tokucho .container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 50px 0;
+    }
+    .tokucho ul {
+        padding-top: 0;
+        padding-left: 94px;
+    }
+    .osusume ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .osusume li {
+        width: 350px;
+    }
+    .toriatsukai {
+        margin-top: 85px;
+    }
+    .toriatsukai p{
+        text-align: left;
+    }
+    .toriatsukai th {
+        padding: 20px 16px;
+        line-height: 1;
+    }
+    .toriatsukai td {
+        padding: 24px 16px;
+        line-height: 1;
+    }
+    .shop p {
+        text-align: left;
+    }
+    .shop iframe {
+        margin-left: 80px;
+        margin-right: 80px;
+        width: calc(100% - 160px);
+        height: 30vw;
+    }
+    .shitsumon {
+        margin-top: 40px;
+    }
+    .shitsumon p {
+        text-align: left;
+    }
+    .shitsumon .button {
+        padding-top: 45px;
+    }
+    footer .container {
+       flex-direction: row;
+       justify-content: center;
+       align-items: flex-end;
+       padding: 45px 0;
+    }
+    footer dl {
+        padding-top: 0;
+        padding-left: 60px;
+    }
+    #pagetop {
+        display: block;
+        position: fixed;
+        top: 100%;
+        right: 60px;
+        opacity: 0;
+        transition: opacity 0.2s,  transform 0.2s;
+        
+    }
+    #pagetop.active{
+      opacity: 1;
+      transform: translateY(-230px);
+    }
+}
